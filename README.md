@@ -4,6 +4,8 @@ Examples from a talk about Node.js Async Iterators
 
 ## Install
 
+**NOTE:** You will need at least **Node.js 16** to run some of the examples in this repository.
+
 Install dependencies with:
 
 ```bash

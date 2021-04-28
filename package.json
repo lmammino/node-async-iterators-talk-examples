@@ -4,6 +4,10 @@
   "description": "Examples from a talk about Node.js Async Iterators",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "engineStrict": true,
   "scripts": {
     "test": "eslint src",
     "prepare": "husky install"
