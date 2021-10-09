@@ -1,31 +1,25 @@
-import querystring from 'querystring'
-import axios from 'axios'
+import { request } from 'undici'
 
-async function main () {
-  let page = 1
-  while (true) {
-    const query = querystring.stringify({
-      method: 'user.getrecenttracks',
-      user: 'loige',
-      api_key: process.env.API_KEY,
-      format: 'json',
-      page
-    })
-    const url = `https://ws.audioscrobbler.com/2.0/?${query}`
+let page = 1
 
-    const response = await axios.get(url)
+while (true) {
+  const query = new URLSearchParams({
+    method: 'user.getrecenttracks',
+    user: 'loige',
+    api_key: process.env.API_KEY,
+    format: 'json',
+    page
+  })
 
-    console.log(response.data)
+  const url = `https://ws.audioscrobbler.com/2.0/?${query}`
+  const { body } = await request(url)
 
-    if (page === Number(response.data.recenttracks['@attr'].totalPages)) {
-      break // it's the last page!
-    }
+  const data = await body.json()
+  console.log(data)
 
-    page++
+  if (page === Number(data.recenttracks['@attr'].totalPages)) {
+    break // it's the last page!
   }
-}
 
-main().catch(err => {
-  console.error(err)
-  process.exit(1)
-})
+  page++
+}

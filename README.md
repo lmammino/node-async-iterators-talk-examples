@@ -2,6 +2,14 @@
 
 Examples from a talk about Node.js Async Iterators
 
+This talk has been delivered in the following events:
+
+  - Finding a lost song with Node.js & async iterators ([Node.js Dublin Meetup](https://www.meetup.com/Dublin-Node-js-Meetup/events/277664008)) - [Slides](https://loige.link/async-it)
+  - Finding a lost song with Node.js & async iterators ([Sailsconf](https://www.sailsconf.com/)) - [Slides](https://loige.link/iter-sails) [Video](https://www.youtube.com/watch?v=yott9nYsEZ8)
+  - Finding a lost song with Node.js & async iterators ([EnterJS](https://enterjs.de/)) - [Slides](https://loige.link/enter-iterators)
+  - Finding a lost song with Node.js & async iterators ([NodeConf Remote](https://www.nodeconfremote.com/)) - [Slides](https://loige.link/nodeconf-iter)
+
+
 ## Install
 
 **NOTE:** You will need at least **Node.js 16** to run some of the examples in this repository.
@@ -32,17 +40,17 @@ You can run them with `node`. For instance:
 node src/07_iterable.js
 ```
 
-## Talk
-
-Slides available at [loige.link/async-it](https://loige.link/async-it).
+## Complete last.fm history package
 
 For a more "serious" library to fetch data from Last.fm check out [`scrobbles`](https://npm.im/scrobbles).
+
 
 ## Contributing
 
 Everyone is very welcome to contribute to this project.
 You can contribute just by submitting bugs or suggesting improvements by
 [opening an issue on GitHub](https://github.com/lmammino/node-async-iterators-talk-examples/issues).
+
 
 ## License
 

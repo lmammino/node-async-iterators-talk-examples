@@ -7,16 +7,9 @@ async function * createAsyncCountdown (from, delay = 1000) {
   }
 }
 
-async function main () {
-  const countdown = createAsyncCountdown(3)
-  console.log(await countdown.next()) // { done: false, value: 3 }
-  console.log(await countdown.next()) // { done: false, value: 2 }
-  console.log(await countdown.next()) // { done: false, value: 1 }
-  console.log(await countdown.next()) // { done: false, value: 0 }
-  console.log(await countdown.next()) // { done: true }
-}
-
-main().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+const countdown = createAsyncCountdown(3)
+console.log(await countdown.next()) // { done: false, value: 3 }
+console.log(await countdown.next()) // { done: false, value: 2 }
+console.log(await countdown.next()) // { done: false, value: 1 }
+console.log(await countdown.next()) // { done: false, value: 0 }
+console.log(await countdown.next()) // { done: true }
